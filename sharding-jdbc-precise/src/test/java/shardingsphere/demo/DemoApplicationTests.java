@@ -57,6 +57,13 @@ public class DemoApplicationTests {
         }
 
     }
+    @Test
+    public void getCopyByUserId(){
+        List<Order> byUserId = orderCopyMapper.findByUserId(20);
+        for (Order order : byUserId) {
+            System.out.println(order);
+        }
 
+    }
 
 }
