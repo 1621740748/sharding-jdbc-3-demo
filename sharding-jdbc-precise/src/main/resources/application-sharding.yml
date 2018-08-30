@@ -7,21 +7,22 @@ sharding:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.jdbc.Driver
 #        jdbc-url: jdbc:mysql://10.250.250.116:3306/ds0?useUnicode=true&characterEncoding=utf8&useSSL=false
-        jdbc-url: jdbc:mysql://10.250.250.216:3306/ds0?useUnicode=true&characterEncoding=utf8&useSSL=false
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/ds0?useUnicode=true&characterEncoding=utf8&useSSL=false
 #        username: root
-        username: fsccc
+        username: root
 #        password: root
-        password: 123456
+        password: yy123456
 
       ds1:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.jdbc.Driver
-        jdbc-url: jdbc:mysql://10.250.250.216:3306/ds1?useUnicode=true&characterEncoding=utf8&useSSL=false
-        username: fsccc
-        password: 123456
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/ds1?useUnicode=true&characterEncoding=utf8&useSSL=false
+        username: root
+        password: yy123456
 
     config:
       sharding:
+        defaultDataSourceName: ds0
         default-database-strategy:
           standard:
             precise-algorithm-class-name: shardingsphere.demo.strategy.HashCodePreciseShardingAlgorithm
